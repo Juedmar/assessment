@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<link rel="icon" href="media/favicon-rubric.png">
+	<link rel="stylesheet" href="files/rubric-grid.css">
+	<title>Speaking Assessment Rubric (50 Points | 70%)</title>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="title" style="border: 2px solid darkgray; padding: 0px; margin-top: 0px; cursor: auto;"><p><font size="3px"><b>Speaking Assessment Rubric (50 Points | 70%)</b></font></p></div>
+  <div class="points" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><font size="2px" color="#AA0000">Audio:<br><input type="checkbox" class="checkbox" checked="checked" id="audio-switch" /><label for="audio-switch" class="toggle"></font><br><br><b>Points:</b></div>
+
+  <div class="criteria" style="cursor: auto;"><b>Criteria:</b></div>
+  <div class="crit1" style="text-align: center; cursor: auto;"><b>Outstanding</b></div>
+  <div class="crit2" style="text-align: center; cursor: auto;"><b>Excellent</b></div>
+  <div class="crit3" style="text-align: center; cursor: auto;"><b>Accomplished</b></div>
+  <div class="crit4" style="text-align: center; cursor: auto;"><b>Satisfactory</b></div>
+  <div class="crit5" style="text-align: center; cursor: auto;"><b>Underdeveloped</b></div>
+  <div class="crit6" style="text-align: center; cursor: auto;"><b>Unsatisfactory</b></div>
+  <div class="crit7" style="text-align: center; cursor: auto;"><b>Inappropriate</b></div>
+
+  <div class="grades" style="cursor: auto;"><b>Grades:</b></div>
+  <div class="grad1" style="text-align: center; cursor: auto;"><b><font color="blue">7,0</b> - 6,1</font></div>
+  <div class="grad2" style="text-align: center; cursor: auto;"><b><font color="blue">6,0</b> - 5,1</font></div>
+  <div class="grad3" style="text-align: center; cursor: auto;"><b><font color="blue">5,0</b> - 4,1</font></div>
+  <div class="grad4" style="text-align: center; cursor: auto;"><b><font color="blue">4,0</b></font></div>
+  <div class="grad5" style="text-align: center; cursor: auto;"><font color="#FF0000">3,9-<b>3,6</b></font>&nbsp; |&nbsp; <font color="#DD0000">3,5-<b>3,1</b></font></div>
+  <div class="grad6" style="text-align: center; cursor: auto;"><font color="#FF0000">3,1-<b>2,7</b></font>&nbsp; |&nbsp; <font color="#DD0000">2,7-<b>2,3</b></font></div>
+  <div class="grad7" style="text-align: center; cursor: auto;"><font color="#FF0000">2,2-<b>1,9</b></font>&nbsp; |&nbsp; <font color="#DD0000">1,8-<b>1,4</b></font></div>
+
+  <div class="percent" style="cursor: auto;"><b>Points</b> (%):</div>
+  <div class="perc1" style="text-align: center; cursor: auto;"><b>10</b> (100%)</div>
+  <div class="perc2" style="text-align: center; cursor: auto;"><b>9</b> (90%)</div>
+  <div class="perc3" style="text-align: center; cursor: auto;"><b>8</b> (80%)</div>
+  <div class="perc4" style="text-align: center; cursor: auto;"><b>7</b> (70%)</div>
+  <div class="perc5" style="text-align: center; cursor: auto;">(60%) <b>6</b> | 5 (50%)</div>
+  <div class="perc6" style="text-align: center; cursor: auto;">(40%) <b>4</b> | 3 (30%)</div>
+  <div class="perc7" style="text-align: center; cursor: auto;">(20%) <b>2</b> | 1 (10%)</div>
+
+  <div class="content" style="cursor: auto;">Content & Relevancy:</div>
+  <div class="cont1" onclick="this.style.backgroundColor='#A7C7E7'; Content.value='10';getResult();">Provides plenty of meaningful, well-focused and accurate information, while being thoroughly relevant to the topic.</div>
+  <div class="cont2" onclick="this.style.backgroundColor='#A7C7E7'; Content.value='9';getResult();">Provides enough meaningful and mostly accurate information, but needs a bit more focusing or with a few minor details missing.</div>
+  <div class="cont3" onclick="this.style.backgroundColor='#A7C7E7'; Content.value='8';getResult();">Provides enough adequately focused and partially relevant information, needs further focusing or with some important details missing.</div>
+  <div class="cont4" onclick="this.style.backgroundColor='#A7C7E7'; Content.value='7';getResult();">Provides barely enough information, not entirely relevant to the topic or with several missing details, needs much further focusing.</div>
+  <div class="cont5" onclick="this.style.backgroundColor='#F2A2E8'; Content.value='6';getResult();">Does not provide quite enough information, with many missing details, which requires much more focus and preparation.</div>
+  <div class="cont6" onclick="this.style.backgroundColor='#F2A2E8'; Content.value='4';getResult();">Provides some information, but content is less than adequate, lacks focus and/or contains multiple fact errors.</div>
+  <div class="cont7" onclick="this.style.backgroundColor='#F2A2E8'; Content.value='2';getResult();">Provides almost no information and/or there is not enough speech to evaluate. Communication is non-existent.</div>
+  <div class="xcont" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Content" min="1" max="10" step="1" oninput="getResult()"></div>
+
+  <div class="vocabulary" style="cursor: auto;">Vocabulary & Expressions:</div>
+  <div class="voca1" onclick="this.style.backgroundColor='#A7C7E7'; Vocabulary.value='10'; getResult();">Vocabulary studied in class was used to express ideas eloquently.</div>
+  <div class="voca2" onclick="this.style.backgroundColor='#A7C7E7'; Vocabulary.value='9'; getResult();">Vocabulary studied in class was used to express ideas eloquently, with a few minor errors or missing words.</div>
+  <div class="voca3" onclick="this.style.backgroundColor='#A7C7E7'; Vocabulary.value='8'; getResult();">A few minor difficulties arose from not using appropriate vocabulary.</div>
+  <div class="voca4" onclick="this.style.backgroundColor='#A7C7E7'; Vocabulary.value='7'; getResult();">Some difficulties arose due to limited vocabulary and/or poor diction.</div>
+  <div class="voca5" onclick="this.style.backgroundColor='#F2A2E8'; Vocabulary.value='6'; getResult();">Lack of basic vocabulary makes communication difficult.</div>
+  <div class="voca6" onclick="this.style.backgroundColor='#F2A2E8'; Vocabulary.value='4'; getResult();">Communication was severely hampered due to lack of vocabulary.</div>
+  <div class="voca7" onclick="this.style.backgroundColor='#F2A2E8'; Vocabulary.value='2'; getResult();">Lack of general vocabulary makes communication almost non-existent.</div>
+  <div class="xvoca" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Vocabulary" min="1" max="10" step="1" oninput="getResult()"></div>
+
+  <div class="pronunciation" style="cursor: auto;">Pronunciation & Clarity:</div>
+  <div class="pron1" onclick="this.style.backgroundColor='#A7C7E7'; Pronunciation.value='10'; getResult();">No errors in pronunciation. Sounds are natural and allow easy comprehension.</div>
+  <div class="pron2" onclick="this.style.backgroundColor='#A7C7E7'; Pronunciation.value='9'; getResult();">Sounds are generally natural and allows comprehension, but with a few minor errors.</div>
+  <div class="pron3" onclick="this.style.backgroundColor='#A7C7E7'; Pronunciation.value='8'; getResult();">Few errors in pronunciation that make comprehension somewhat difficult.</div>
+  <div class="pron4" onclick="this.style.backgroundColor='#A7C7E7'; Pronunciation.value='7'; getResult();">Some errors in pronunciation that hinder comprehension.</div>
+  <div class="pron5" onclick="this.style.backgroundColor='#F2A2E8'; Pronunciation.value='6'; getResult();">Frequent errors in pronunciation that cause misunderstanding.</div>
+  <div class="pron6" onclick="this.style.backgroundColor='#F2A2E8'; Pronunciation.value='4'; getResult();">Frequent errors in pronunciation that impedes comprehension and communication.</div>
+  <div class="pron7" onclick="this.style.backgroundColor='#F2A2E8'; Pronunciation.value='2'; getResult();">Pronunciation is completely foreign and communication breaks down completely.</div>
+  <div class="xpron" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Pronunciation" min="1" max="10" step="1" oninput="getResult()"></div>
+
+  <div class="fluency" style="cursor: auto;">Fluency & Pacing:</div>
+  <div class="flue1" onclick="this.style.backgroundColor='#A7C7E7'; Fluency.value='10'; getResult();">Speech is clear and natural. Conversation-like pacing is smooth and fluent.</div>
+  <div class="flue2" onclick="this.style.backgroundColor='#A7C7E7'; Fluency.value='9'; getResult();">Speech is mostly conversational & smooth, but with a few moments of hesitancy.</div>
+  <div class="flue3" onclick="this.style.backgroundColor='#A7C7E7'; Fluency.value='8'; getResult();">Some minor difficulties maintaining fluent speech were evident.</div>
+  <div class="flue4" onclick="this.style.backgroundColor='#A7C7E7'; Fluency.value='7'; getResult();">Some effort was required to maintain effective communication. There may have been a few long pauses.</div>
+  <div class="flue5" onclick="this.style.backgroundColor='#F2A2E8'; Fluency.value='6'; getResult();">Much effort was required to maintain the conversation. There may have been many long pauses.</div>
+  <div class="flue6" onclick="this.style.backgroundColor='#F2A2E8'; Fluency.value='4'; getResult();">Speech is evidently hesitant. There were many long pauses.</div>
+  <div class="flue7" onclick="this.style.backgroundColor='#F2A2E8'; Fluency.value='2'; getResult();">Speech is completely interrupted & staggered, or contains more gaps than actual information.</div>
+  <div class="xflue" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Fluency" min="1" max="10" step="1" oninput="getResult()"></div>
+
+  <div class="grammar" style="cursor: auto;">Grammar & Use of English:</div>
+  <div class="gram1" onclick="this.style.backgroundColor='#A7C7E7'; Grammar.value='10'; getResult();">Grammar and idiomatic expressions seen in class were used to communicate accurately and effectively.</div>
+  <div class="gram2" onclick="this.style.backgroundColor='#A7C7E7'; Grammar.value='9'; getResult();">Basic grammar was used effectively, but with a few minor errors or missing expressions.</div>
+  <div class="gram3" onclick="this.style.backgroundColor='#A7C7E7'; Grammar.value='8'; getResult();">More than a few errors or difficulties arose from not using the grammar studied in class correctly.</div>
+  <div class="gram4" onclick="this.style.backgroundColor='#A7C7E7'; Grammar.value='7'; getResult();">Basic grammatical structures were used incorrectly and/or barely used when necessary.</div>
+  <div class="gram5" onclick="this.style.backgroundColor='#F2A2E8'; Grammar.value='6'; getResult();">Missing structures and/or errors led to many minor difficulties or one major breakdown in communication.</div>
+  <div class="gram6" onclick="this.style.backgroundColor='#F2A2E8'; Grammar.value='4'; getResult();">Missing grammatical structures and/or errors severely hampered communication.</div>
+  <div class="gram7" onclick="this.style.backgroundColor='#F2A2E8'; Grammar.value='2'; getResult();">Grammatical errors make it impossible to communicate. No basic grammar structures.</div>
+  <div class="xgram" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Grammar" min="1" max="10" step="1" oninput="getResult()"><br><input type="button" id="result" value="Grade!" onclick="getResult()" style="float: right;"></div>
+
+  <div class="foot" style="border: 0px dashed darkgray; cursor: auto;"><p class="footnotes">This scoring rubric identifies 10 points in its scale. The passing grade corresponds to 7 points in each criteria, which represents 70% achievement. Click on the different descritors to assign the points. You can also assign points manually. <font color="darkred">Half points cannot be assigned on this online form.</font></p></div>
+  <div class="label1" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Points:</b></font></div>
+  <div class="sum" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: not-allowed;"><input type="number" class="TheResults" title="Points" id="Points" READONLY disabled="disabled" min="5" max="50"></div>
+
+  <div class="design" style="border: 0px dashed darkgray; cursor: grab;"><font color="gray"><br>Designed by Juan Edo. Méndez<br>(juan.mendez@upla.cl).</font></div>
+  <div class="printout" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="6px" color="gray"><a onclick="window.print()" style="cursor: pointer;">&#x1f5b6</a></font></div>
+  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a class="students-name" id="students-name" onclick="getStudentName()" style="cursor: pointer;">Click to change!</a></font></div>
+  <div class="final" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><b>Grade: <input type="number" title="FinalGrade" id="FinalGrade" class="FinalGrade" READONLY disabled="disabled" min="1.0" max="7.0" step="0.1" placeholder="0.0"></b></font></div>
+  <div class="label2" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Percent:</b></font></div>
+  <div class="multiply" style="border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; text-align: center; cursor: not-allowed;"><input type="number" class="TheResults" title="Percent" id="Percent" READONLY disabled="disabled" min="10" max="100"></div>
+
+</div>
+
+<audio id="BlueAudio" src="media/blue.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="RedAudio" src="media/red.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="ErrorAudio" src="media/error.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+
+<audio id="Points02" src="points/02.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points04" src="points/04.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points05" src="points/05.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points06" src="points/06.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points07" src="points/07.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points08" src="points/08.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points09" src="points/09.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points10" src="points/10.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points11" src="points/11.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points12" src="points/12.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points13" src="points/13.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points14" src="points/14.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points15" src="points/15.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points16" src="points/16.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points17" src="points/17.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points18" src="points/18.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points19" src="points/19.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points20" src="points/20.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+
+<!-- EVALUATION SCRIPT -->
+<script type="text/javascript" src="files/evaluation-script.js"></script>
+<!-- EVALUATION SCRIPT -->
+
+
+<!-- STUDENT'S NAME SCRIPT -->
+<script>
+function getStudentName() {
+  var person = prompt("Enter student's name:", "Enter student's name here!");
+  if (person != null) {
+    document.getElementById("students-name").innerHTML = person; } }
+</script>
+<!-- STUDENT'S NAME SCRIPT -->
+
+
+<div class="popup" id="popup">
+  <span class="closebtn" onclick="this.parentElement.style.display='none'; killPopUp();">&times;</span>
+  <font style="color: yellow; font-size: 20px;"><b>&#x2B07;</b></font> Click on the criteria boxes to assign the points! <font style="color: yellow; font-size: 22px;"><b>&#x27A1;</b> &nbsp;&nbsp;&nbsp;
+</div>
+
+
+<script>
+function killPopUp() {
+	if (typeof(Storage) !== "undefined") {
+	  localStorage.setItem("popup", "killed");
+	  document.getElementById("popup").style.display = "none"; } }
+
+ if (localStorage.getItem("popup") === "killed") {
+   document.getElementById("popup").style.display = "none"; }
+</script>
+
+
+</body>
+</html>
