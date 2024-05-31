@@ -1,14 +1,21 @@
 
 function getResult() {
-     var Content = parseInt(document.getElementById("Content").value);
-     var Vocabulary = parseInt(document.getElementById("Vocabulary").value);
-     var Pronunciation = parseInt(document.getElementById("Pronunciation").value);
-     var Fluency = parseInt(document.getElementById("Fluency").value);
-     var Grammar = parseInt(document.getElementById("Grammar").value);
+     var Content = parseFloat(document.getElementById("Content").value);
+     var Vocabulary = parseFloat(document.getElementById("Vocabulary").value);
+     var Pronunciation = parseFloat(document.getElementById("Pronunciation").value);
+     var Fluency = parseFloat(document.getElementById("Fluency").value);
+     var Grammar = parseFloat(document.getElementById("Grammar").value);
+
+	// OLD CODE WITH INTEGERS
+	//     var Content = parseInt(document.getElementById("Content").value);
+	//     var Vocabulary = parseInt(document.getElementById("Vocabulary").value);
+	//     var Pronunciation = parseInt(document.getElementById("Pronunciation").value);
+	//     var Fluency = parseInt(document.getElementById("Fluency").value);
+	//     var Grammar = parseInt(document.getElementById("Grammar").value);
 
      var getPoints = document.getElementById("Points");
      Points.value  = Content + Vocabulary + Pronunciation + Fluency + Grammar;
-	Points.value = parseFloat(Points.value).toFixed(0);
+	Points.value = parseFloat(Points.value);
 
      var getPercent = document.getElementById("Percent");
      Percent.value = (Points.value / 50) * 100;
@@ -20,7 +27,7 @@ function getResult() {
 		document.getElementById("FinalGrade").style.color = "blue";
 		document.getElementById("FinalGrade").style.background = "lightblue"; 
 		document.getElementById("FinalGrade").style.transition = "background 1.2s"; }
-	else if (Percent.value <= 9) { FinalGrade.value = "0.0"; document.getElementById("FinalGrade").style.color = "black"; }
+	else if (Percent.value <= 1) { FinalGrade.value = "0.0"; document.getElementById("FinalGrade").style.color = "black"; }
 	else if (Percent.value <= 69) { FinalGrade.value = (3/70) * (Percent.value) + 1;
 		FinalGrade.value = parseFloat(FinalGrade.value).toFixed(1);
 		document.getElementById("FinalGrade").style.color = "red"; 
