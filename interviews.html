@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<link rel="icon" href="media/favicon-rubric.png">
+	<link rel="stylesheet" href="files/interview-grid.css">
+	<title>Speaking Assessment Rubric (50 Points | 70% Scale)</title>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="title" style="border: 2px solid darkgray; padding: 0px; margin-top: 0px; cursor: auto;"><p><font size="3px"><b>Speaking Assessment Rubric (50 Points | 70% Scale)</b></font></p></div>
+  <div class="points" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><font size="2px" color="#AA0000">Audio:<br><input type="checkbox" class="checkbox" unchecked id="audio-switch" /><label for="audio-switch" class="toggle"></font><br><br><b>Points:</b></div>
+
+  <div class="criteria" style="cursor: auto;"><b>Criteria:</b></div>
+  <div class="crit1" style="text-align: center; cursor: auto;"><b>Outstanding</b></div>
+  <div class="crit2" style="text-align: center; cursor: auto;"><b>Excellent</b></div>
+  <div class="crit3" style="text-align: center; cursor: auto;"><b>Accomplished</b></div>
+  <div class="crit4" style="text-align: center; cursor: auto;"><b>Satisfactory</b></div>
+  <div class="crit5" style="text-align: center; cursor: auto;"><b>Underdeveloped</b></div>
+  <div class="crit6" style="text-align: center; cursor: auto;"><b>Unsatisfactory</b></div>
+  <div class="crit7" style="text-align: center; cursor: auto;"><b>Inappropriate</b></div>
+
+  <div class="grades" style="cursor: auto;"><b>Grades:</b></div>
+  <div class="grad1" style="text-align: center; cursor: auto;"><b><font color="blue">7,0</b> - 6,1</font></div>
+  <div class="grad2" style="text-align: center; cursor: auto;"><b><font color="blue">6,0</b> - 5,1</font></div>
+  <div class="grad3" style="text-align: center; cursor: auto;"><b><font color="blue">5,0</b> - 4,1</font></div>
+  <div class="grad4" style="text-align: center; cursor: auto;"><b><font color="blue">4,0</b></font></div>
+  <div class="grad5" style="text-align: center; cursor: auto;"><font color="#FF0000">3,9-<b>3,6</b></font>&nbsp; |&nbsp; <font color="#DD0000">3,5-<b>3,1</b></font></div>
+  <div class="grad6" style="text-align: center; cursor: auto;"><font color="#FF0000">3,1-<b>2,7</b></font>&nbsp; |&nbsp; <font color="#DD0000">2,7-<b>2,3</b></font></div>
+  <div class="grad7" style="text-align: center; cursor: auto;"><font color="#FF0000">2,2-<b>1,9</b></font>&nbsp; |&nbsp; <font color="#DD0000">1,8-<b>1,4</b></font></div>
+
+  <div class="percent" style="cursor: auto;"><b>Points</b> (%):</div>
+  <div class="perc1" style="text-align: center; cursor: auto;"><b>10</b> (100%)</div>
+  <div class="perc2" style="text-align: center; cursor: auto;"><b>9</b> (90%)</div>
+  <div class="perc3" style="text-align: center; cursor: auto;"><b>8</b> (80%)</div>
+  <div class="perc4" style="text-align: center; cursor: auto;"><b>7</b> (70%)</div>
+  <div class="perc5" style="text-align: center; cursor: auto;">(60%) <b>6</b> | 5 (50%)</div>
+  <div class="perc6" style="text-align: center; cursor: auto;">(40%) <b>4</b> | 3 (30%)</div>
+  <div class="perc7" style="text-align: center; cursor: auto;">(20%) <b>2</b> | 1 (10%)</div>
+
+  <div class="content" style="cursor: auto;">Content & Relevancy:</div>
+  <div class="cont1" id="cont1" onclick="Content.value='10'; getResult(); contColorChange();">Provides plenty of meaningful, well-focused and accurate information, while being thoroughly relevant to the topic.</div>
+  <div class="cont2" id="cont2" onclick="Content.value='9'; getResult(); contColorChange();">Provides enough meaningful and mostly accurate information, but needs a bit more focusing or with a few minor details missing.</div>
+  <div class="cont3" id="cont3" onclick="Content.value='8'; getResult(); contColorChange();">Provides enough adequately focused and partially relevant information, needs further focusing or with some important details missing.</div>
+  <div class="cont4" id="cont4" onclick="Content.value='7'; getResult(); contColorChange();">Provides barely enough information, not entirely relevant to the topic or with several missing details, needs much further focusing.</div>
+  <div class="cont5" id="cont5" onclick="Content.value='6'; getResult(); contColorChange();">Does not provide quite enough information, with many missing details, which requires much more focus and preparation.</div>
+  <div class="cont6" id="cont6" onclick="Content.value='4'; getResult(); contColorChange();">Provides some information, but content is less than adequate, lacks focus and/or contains multiple fact errors.</div>
+  <div class="cont7" id="cont7" onclick="Content.value='2'; getResult(); contColorChange();">Provides almost no information and/or there is not enough speech to evaluate. Communication is non-existent.</div>
+  <div class="xcont" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Content" min="0" max="10" step="0.5" oninput="getResult(); contColorChange();"></div>
+
+  <div class="vocabulary" style="cursor: auto;">Vocabulary & Expressions:</div>
+  <div class="voca1" id="voca1" onclick="Vocabulary.value='10'; getResult(); vocaColorChange()">Vocabulary studied in class was used to express ideas eloquently.</div>
+  <div class="voca2" id="voca2" onclick="Vocabulary.value='9'; getResult(); vocaColorChange()">Vocabulary studied in class was used to express ideas eloquently, with a few minor errors or missing words.</div>
+  <div class="voca3" id="voca3" onclick="Vocabulary.value='8'; getResult(); vocaColorChange()">A few minor difficulties arose from not using appropriate vocabulary.</div>
+  <div class="voca4" id="voca4" onclick="Vocabulary.value='7'; getResult(); vocaColorChange()">Some difficulties arose due to limited vocabulary and/or poor diction.</div>
+  <div class="voca5" id="voca5" onclick="Vocabulary.value='6'; getResult(); vocaColorChange()">Lack of basic vocabulary makes communication difficult.</div>
+  <div class="voca6" id="voca6" onclick="Vocabulary.value='4'; getResult(); vocaColorChange()">Communication was severely hampered due to lack of vocabulary.</div>
+  <div class="voca7" id="voca7" onclick="Vocabulary.value='2'; getResult(); vocaColorChange()">Lack of general vocabulary makes communication almost non-existent.</div>
+  <div class="xvoca" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Vocabulary" min="0" max="10" step="0.5" oninput="getResult(); vocaColorChange();"></div>
+
+  <div class="pronunciation" style="cursor: auto;">Pronunciation & Clarity:</div>
+  <div class="pron1" id="pron1" onclick="Pronunciation.value='10'; getResult(); pronColorChange();">No errors in pronunciation. Sounds are natural and allow easy comprehension.</div>
+  <div class="pron2" id="pron2" onclick="Pronunciation.value='9'; getResult(); pronColorChange();">Sounds are generally natural and allows comprehension, but with a few minor errors.</div>
+  <div class="pron3" id="pron3" onclick="Pronunciation.value='8'; getResult(); pronColorChange();">Few errors in pronunciation that make comprehension somewhat difficult.</div>
+  <div class="pron4" id="pron4" onclick="Pronunciation.value='7'; getResult(); pronColorChange();">Some errors in pronunciation that hinder comprehension.</div>
+  <div class="pron5" id="pron5" onclick="Pronunciation.value='6'; getResult(); pronColorChange();">Frequent errors in pronunciation that cause misunderstanding.</div>
+  <div class="pron6" id="pron6" onclick="Pronunciation.value='4'; getResult(); pronColorChange();">Frequent errors in pronunciation that impedes comprehension and communication.</div>
+  <div class="pron7" id="pron7" onclick="Pronunciation.value='2'; getResult(); pronColorChange();">Pronunciation is completely foreign and communication breaks down completely.</div>
+  <div class="xpron" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Pronunciation" min="0" max="10" step="0.5" oninput="getResult(); pronColorChange();"></div>
+
+  <div class="fluency" style="cursor: auto;">Fluency & Pacing:</div>
+  <div class="flue1" id="flue1" onclick="Fluency.value='10'; getResult(); flueColorChange();">Speech is clear and natural. Conversation-like pacing is smooth and fluent.</div>
+  <div class="flue2" id="flue2" onclick="Fluency.value='9'; getResult(); flueColorChange();">Speech is mostly conversational & smooth, but with a few moments of hesitancy.</div>
+  <div class="flue3" id="flue3" onclick="Fluency.value='8'; getResult(); flueColorChange();">Some minor difficulties maintaining fluent speech were evident.</div>
+  <div class="flue4" id="flue4" onclick="Fluency.value='7'; getResult(); flueColorChange();">Some effort was required to maintain effective communication. There may have been a few long pauses.</div>
+  <div class="flue5" id="flue5" onclick="Fluency.value='6'; getResult(); flueColorChange();">Much effort was required to maintain the conversation. There may have been many long pauses.</div>
+  <div class="flue6" id="flue6" onclick="Fluency.value='4'; getResult(); flueColorChange();">Speech is evidently hesitant. There were many long pauses.</div>
+  <div class="flue7" id="flue7" onclick="Fluency.value='2'; getResult(); flueColorChange();">Speech is completely interrupted & staggered, or contains more gaps than actual information.</div>
+  <div class="xflue" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Fluency" min="0" max="10" step="0.5" oninput="getResult(); flueColorChange();"></div>
+
+  <div class="grammar" style="cursor: auto;">Grammar & Use of English:</div>
+  <div class="gram1" id="gram1" onclick="Grammar.value='10'; getResult(); gramColorChange();">Grammar and idiomatic expressions seen in class were used to communicate accurately and effectively.</div>
+  <div class="gram2" id="gram2" onclick="Grammar.value='9'; getResult(); gramColorChange();">Basic grammar was used effectively, but with a few minor errors or missing expressions.</div>
+  <div class="gram3" id="gram3" onclick="Grammar.value='8'; getResult(); gramColorChange();">More than a few errors or difficulties arose from not using the grammar studied in class correctly.</div>
+  <div class="gram4" id="gram4" onclick="Grammar.value='7'; getResult(); gramColorChange();">Basic grammatical structures were used incorrectly and/or barely used when necessary.</div>
+  <div class="gram5" id="gram5" onclick="Grammar.value='6'; getResult(); gramColorChange();">Missing structures and/or errors led to many minor difficulties or one major breakdown in communication.</div>
+  <div class="gram6" id="gram6" onclick="Grammar.value='4'; getResult(); gramColorChange();">Missing grammatical structures and/or errors severely hampered communication.</div>
+  <div class="gram7" id="gram7" onclick="Grammar.value='2'; getResult(); gramColorChange();">Grammatical errors make it impossible to communicate. No basic grammar structures.</div>
+  <div class="xgram" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Grammar" min="0" max="10" step="0.5" oninput="getResult(); gramColorChange();"></div>
+
+  <div class="foot" style="border: 0px dashed darkgray; cursor: auto;"><p class="footnotes">This scoring rubric identifies 10 points in its scale. The passing grade corresponds to 7 points in each criteria, which represents 70% achievement. Click on the different descritors to assign the points or, do it manually to assign half points. More tools available on the <a href="https://play.google.com/store/apps/details?id=speaking.assessment.rubric" target="_blank">Speaking Assessment App</a> (Android phones).</p></div>
+  <div class="label1" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Points:</b></font></div>
+  <div class="sum" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: not-allowed;"><input type="number" class="TheResults" title="Points" id="Points" READONLY disabled="disabled" min="5" max="50" step="0.5"></div>
+
+  <div class="design" style="border: 0px dashed darkgray; cursor: grab;"><font size="1px" color="gray"><br>Developed by Juan Edo. Méndez (juan.mendez@upla.cl)</font></div>
+  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a class="students-name" id="students-name" onclick="getStudentName()" style="cursor: pointer;">Click to change!</a></font></div>
+  <div class="printout" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="6px" color="gray"><a onclick="window.print()" style="cursor: pointer;"><small>🖨️</small></a></font></div>
+  <div class="final" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><b>Grade: <input type="number" title="FinalGrade" id="FinalGrade" class="FinalGrade" READONLY disabled="disabled" min="1.0" max="7.0" step="0.1" placeholder="0.0"></b></font></div>
+  <div class="label2" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Percent:</b></font></div>
+  <div class="multiply" style="border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; text-align: center; cursor: not-allowed;"><input type="number" class="TheResults" title="Percent" id="Percent" READONLY disabled="disabled" min="10" max="100"></div>
+
+</div>
+
+<audio id="BlueAudio" src="media/blue.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="RedAudio" src="media/red.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="ErrorAudio" src="media/error.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+
+<audio id="Points02" src="points/02.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points04" src="points/04.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points05" src="points/05.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points06" src="points/06.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points07" src="points/07.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points08" src="points/08.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points09" src="points/09.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points10" src="points/10.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points11" src="points/11.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points12" src="points/12.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points13" src="points/13.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points14" src="points/14.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points15" src="points/15.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points16" src="points/16.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points17" src="points/17.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points18" src="points/18.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points19" src="points/19.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="Points20" src="points/20.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+
+
+<!-- EVALUATION SCRIPT -->
+<script type="text/javascript" src="files/interview-script.js"></script>
+<!-- EVALUATION SCRIPT -->
+
+
+<!-- CONTENT CHANGE SCRIPT -->
+  <script type="text/javascript">
+    function contColorChange() {
+      var content = document.getElementById("Content");
+      var content1 = document.getElementById("cont1");
+      var content2 = document.getElementById("cont2");
+      var content3 = document.getElementById("cont3");
+      var content4 = document.getElementById("cont4");
+      var content5 = document.getElementById("cont5");
+      var content6 = document.getElementById("cont6");
+      var content7 = document.getElementById("cont7");
+
+      if (content.value >= 11) {
+	document.getElementById("Content").style.background = "red";
+        content1.style.backgroundColor = ""; content1.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content2.style.backgroundColor = ""; content2.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content3.style.backgroundColor = ""; content3.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content4.style.backgroundColor = ""; content4.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content5.style.backgroundColor = ""; content5.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content6.style.backgroundColor = ""; content6.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        content7.style.backgroundColor = ""; content7.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+	}
+
+      if (content.value == 10) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#A7C7E7"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 9 && content.value < 10) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        content2.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        content3.style.backgroundColor = "#FFFFFF";
+        content4.style.backgroundColor = "#FFFFFF";
+        content5.style.backgroundColor = "#FFFFFF";
+        content6.style.backgroundColor = "#FFFFFF";
+        content7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (content.value == 9) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#A7C7E7"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 8 && content.value < 9) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF";
+        content2.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        content3.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        content4.style.backgroundColor = "#FFFFFF";
+        content5.style.backgroundColor = "#FFFFFF";
+        content6.style.backgroundColor = "#FFFFFF";
+        content7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (content.value == 8) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#A7C7E7"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 7 && content.value < 8) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF";
+        content2.style.backgroundColor = "#FFFFFF";
+        content3.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        content4.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        content5.style.backgroundColor = "#FFFFFF";
+        content6.style.backgroundColor = "#FFFFFF";
+        content7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (content.value == 7) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#A7C7E7"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 6 && content.value < 7) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF";
+        content2.style.backgroundColor = "#FFFFFF";
+        content3.style.backgroundColor = "#FFFFFF";
+        content4.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        content5.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        content6.style.backgroundColor = "#FFFFFF";
+        content7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (content.value >= 5 && content.value <= 6) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#F2A2E8"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 4 && content.value < 5) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF";
+        content2.style.backgroundColor = "#FFFFFF";
+        content3.style.backgroundColor = "#FFFFFF";
+        content4.style.backgroundColor = "#FFFFFF";
+        content5.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        content6.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        content7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (content.value >= 3 && content.value <= 4) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#F2A2E8"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value > 2 && content.value < 3) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF";
+        content2.style.backgroundColor = "#FFFFFF";
+        content3.style.backgroundColor = "#FFFFFF";
+        content4.style.backgroundColor = "#FFFFFF";
+        content5.style.backgroundColor = "#FFFFFF";
+        content6.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        content7.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+	}
+
+      if (content.value >= 1 && content.value <= 2) {
+        Content.style.backgroundColor = "#FFFFFF";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#F2A2E8"; content7.style.backgroundImage = "";
+	}
+
+      if (content.value >= 0 && content.value < 1) {
+        Content.style.backgroundColor = "#F2A2E8";
+        content1.style.backgroundColor = "#FFFFFF"; content1.style.backgroundImage = "";
+        content2.style.backgroundColor = "#FFFFFF"; content2.style.backgroundImage = "";
+        content3.style.backgroundColor = "#FFFFFF"; content3.style.backgroundImage = "";
+        content4.style.backgroundColor = "#FFFFFF"; content4.style.backgroundImage = "";
+        content5.style.backgroundColor = "#FFFFFF"; content5.style.backgroundImage = "";
+        content6.style.backgroundColor = "#FFFFFF"; content6.style.backgroundImage = "";
+        content7.style.backgroundColor = "#FFFFFF"; content7.style.backgroundImage = "";
+	}
+    }
+  </script>
+<!-- CONTENT CHANGE SCRIPT -->
+
+
+
+<!-- VOCABULARY CHANGE SCRIPT -->
+  <script type="text/javascript">
+    function vocaColorChange() {
+      var vocabulary = document.getElementById("Vocabulary");
+      var vocabulary1 = document.getElementById("voca1");
+      var vocabulary2 = document.getElementById("voca2");
+      var vocabulary3 = document.getElementById("voca3");
+      var vocabulary4 = document.getElementById("voca4");
+      var vocabulary5 = document.getElementById("voca5");
+      var vocabulary6 = document.getElementById("voca6");
+      var vocabulary7 = document.getElementById("voca7");
+
+      if (vocabulary.value >= 11) {
+	document.getElementById("Vocabulary").style.background = "red";
+        vocabulary1.style.backgroundColor = ""; vocabulary1.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary2.style.backgroundColor = ""; vocabulary2.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary3.style.backgroundColor = ""; vocabulary3.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary4.style.backgroundColor = ""; vocabulary4.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary5.style.backgroundColor = ""; vocabulary5.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary6.style.backgroundColor = ""; vocabulary6.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        vocabulary7.style.backgroundColor = ""; vocabulary7.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+	}
+
+      if (vocabulary.value == 10) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#A7C7E7"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 9 && vocabulary.value < 10) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        vocabulary2.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        vocabulary3.style.backgroundColor = "#FFFFFF";
+        vocabulary4.style.backgroundColor = "#FFFFFF";
+        vocabulary5.style.backgroundColor = "#FFFFFF";
+        vocabulary6.style.backgroundColor = "#FFFFFF";
+        vocabulary7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (vocabulary.value == 9) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#A7C7E7"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 8 && vocabulary.value < 9) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF";
+        vocabulary2.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        vocabulary3.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        vocabulary4.style.backgroundColor = "#FFFFFF";
+        vocabulary5.style.backgroundColor = "#FFFFFF";
+        vocabulary6.style.backgroundColor = "#FFFFFF";
+        vocabulary7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (vocabulary.value == 8) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#A7C7E7"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 7 && vocabulary.value < 8) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF";
+        vocabulary2.style.backgroundColor = "#FFFFFF";
+        vocabulary3.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        vocabulary4.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        vocabulary5.style.backgroundColor = "#FFFFFF";
+        vocabulary6.style.backgroundColor = "#FFFFFF";
+        vocabulary7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (vocabulary.value == 7) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#A7C7E7"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 6 && vocabulary.value < 7) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF";
+        vocabulary2.style.backgroundColor = "#FFFFFF";
+        vocabulary3.style.backgroundColor = "#FFFFFF";
+        vocabulary4.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        vocabulary5.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        vocabulary6.style.backgroundColor = "#FFFFFF";
+        vocabulary7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (vocabulary.value >= 5 && vocabulary.value <= 6) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#F2A2E8"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 4 && vocabulary.value < 5) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF";
+        vocabulary2.style.backgroundColor = "#FFFFFF";
+        vocabulary3.style.backgroundColor = "#FFFFFF";
+        vocabulary4.style.backgroundColor = "#FFFFFF";
+        vocabulary5.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        vocabulary6.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        vocabulary7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (vocabulary.value >= 3 && vocabulary.value <= 4) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#F2A2E8"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value > 2 && vocabulary.value < 3) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF";
+        vocabulary2.style.backgroundColor = "#FFFFFF";
+        vocabulary3.style.backgroundColor = "#FFFFFF";
+        vocabulary4.style.backgroundColor = "#FFFFFF";
+        vocabulary5.style.backgroundColor = "#FFFFFF";
+        vocabulary6.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        vocabulary7.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+	}
+
+      if (vocabulary.value >= 1 && vocabulary.value <= 2) {
+        vocabulary.style.backgroundColor = "#FFFFFF";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#F2A2E8"; vocabulary7.style.backgroundImage = "";
+	}
+
+      if (vocabulary.value >= 0 && vocabulary.value < 1) {
+        vocabulary.style.backgroundColor = "#F2A2E8";
+        vocabulary1.style.backgroundColor = "#FFFFFF"; vocabulary1.style.backgroundImage = "";
+        vocabulary2.style.backgroundColor = "#FFFFFF"; vocabulary2.style.backgroundImage = "";
+        vocabulary3.style.backgroundColor = "#FFFFFF"; vocabulary3.style.backgroundImage = "";
+        vocabulary4.style.backgroundColor = "#FFFFFF"; vocabulary4.style.backgroundImage = "";
+        vocabulary5.style.backgroundColor = "#FFFFFF"; vocabulary5.style.backgroundImage = "";
+        vocabulary6.style.backgroundColor = "#FFFFFF"; vocabulary6.style.backgroundImage = "";
+        vocabulary7.style.backgroundColor = "#FFFFFF"; vocabulary7.style.backgroundImage = "";
+	}
+    }
+  </script>
+<!-- VOCABULARY CHANGE SCRIPT -->
+
+
+
+<!-- PRONUNCIATION CHANGE SCRIPT -->
+  <script type="text/javascript">
+    function pronColorChange() {
+      var pronunciation = document.getElementById("Pronunciation");
+      var pronunciation1 = document.getElementById("pron1");
+      var pronunciation2 = document.getElementById("pron2");
+      var pronunciation3 = document.getElementById("pron3");
+      var pronunciation4 = document.getElementById("pron4");
+      var pronunciation5 = document.getElementById("pron5");
+      var pronunciation6 = document.getElementById("pron6");
+      var pronunciation7 = document.getElementById("pron7");
+
+      if (pronunciation.value >= 11) {
+	document.getElementById("Pronunciation").style.background = "red";
+        pronunciation1.style.backgroundColor = ""; pronunciation1.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation2.style.backgroundColor = ""; pronunciation2.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation3.style.backgroundColor = ""; pronunciation3.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation4.style.backgroundColor = ""; pronunciation4.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation5.style.backgroundColor = ""; pronunciation5.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation6.style.backgroundColor = ""; pronunciation6.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        pronunciation7.style.backgroundColor = ""; pronunciation7.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+	}
+
+      if (pronunciation.value == 10) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#A7C7E7"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 9 && pronunciation.value < 10) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        pronunciation2.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        pronunciation3.style.backgroundColor = "#FFFFFF";
+        pronunciation4.style.backgroundColor = "#FFFFFF";
+        pronunciation5.style.backgroundColor = "#FFFFFF";
+        pronunciation6.style.backgroundColor = "#FFFFFF";
+        pronunciation7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (pronunciation.value == 9) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#A7C7E7"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 8 && pronunciation.value < 9) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF";
+        pronunciation2.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        pronunciation3.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        pronunciation4.style.backgroundColor = "#FFFFFF";
+        pronunciation5.style.backgroundColor = "#FFFFFF";
+        pronunciation6.style.backgroundColor = "#FFFFFF";
+        pronunciation7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (pronunciation.value == 8) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#A7C7E7"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 7 && pronunciation.value < 8) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF";
+        pronunciation2.style.backgroundColor = "#FFFFFF";
+        pronunciation3.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        pronunciation4.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        pronunciation5.style.backgroundColor = "#FFFFFF";
+        pronunciation6.style.backgroundColor = "#FFFFFF";
+        pronunciation7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (pronunciation.value == 7) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#A7C7E7"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 6 && pronunciation.value < 7) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF";
+        pronunciation2.style.backgroundColor = "#FFFFFF";
+        pronunciation3.style.backgroundColor = "#FFFFFF";
+        pronunciation4.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        pronunciation5.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        pronunciation6.style.backgroundColor = "#FFFFFF";
+        pronunciation7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (pronunciation.value >= 5 && pronunciation.value <= 6) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#F2A2E8"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 4 && pronunciation.value < 5) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF";
+        pronunciation2.style.backgroundColor = "#FFFFFF";
+        pronunciation3.style.backgroundColor = "#FFFFFF";
+        pronunciation4.style.backgroundColor = "#FFFFFF";
+        pronunciation5.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        pronunciation6.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        pronunciation7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (pronunciation.value >= 3 && pronunciation.value <= 4) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#F2A2E8"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value > 2 && pronunciation.value < 3) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF";
+        pronunciation2.style.backgroundColor = "#FFFFFF";
+        pronunciation3.style.backgroundColor = "#FFFFFF";
+        pronunciation4.style.backgroundColor = "#FFFFFF";
+        pronunciation5.style.backgroundColor = "#FFFFFF";
+        pronunciation6.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        pronunciation7.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+	}
+
+      if (pronunciation.value >= 1 && pronunciation.value <= 2) {
+        pronunciation.style.backgroundColor = "#FFFFFF";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#F2A2E8"; pronunciation7.style.backgroundImage = "";
+	}
+
+      if (pronunciation.value >= 0 && pronunciation.value < 1) {
+        pronunciation.style.backgroundColor = "#F2A2E8";
+        pronunciation1.style.backgroundColor = "#FFFFFF"; pronunciation1.style.backgroundImage = "";
+        pronunciation2.style.backgroundColor = "#FFFFFF"; pronunciation2.style.backgroundImage = "";
+        pronunciation3.style.backgroundColor = "#FFFFFF"; pronunciation3.style.backgroundImage = "";
+        pronunciation4.style.backgroundColor = "#FFFFFF"; pronunciation4.style.backgroundImage = "";
+        pronunciation5.style.backgroundColor = "#FFFFFF"; pronunciation5.style.backgroundImage = "";
+        pronunciation6.style.backgroundColor = "#FFFFFF"; pronunciation6.style.backgroundImage = "";
+        pronunciation7.style.backgroundColor = "#FFFFFF"; pronunciation7.style.backgroundImage = "";
+	}
+    }
+  </script>
+<!-- PRONUNCIATION CHANGE SCRIPT -->
+
+
+
+<!-- FLUENCY CHANGE SCRIPT -->
+  <script type="text/javascript">
+    function flueColorChange() {
+      var fluency = document.getElementById("Fluency");
+      var fluency1 = document.getElementById("flue1");
+      var fluency2 = document.getElementById("flue2");
+      var fluency3 = document.getElementById("flue3");
+      var fluency4 = document.getElementById("flue4");
+      var fluency5 = document.getElementById("flue5");
+      var fluency6 = document.getElementById("flue6");
+      var fluency7 = document.getElementById("flue7");
+
+      if (fluency.value >= 11) {
+	document.getElementById("Fluency").style.background = "red";
+        fluency1.style.backgroundColor = ""; fluency1.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency2.style.backgroundColor = ""; fluency2.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency3.style.backgroundColor = ""; fluency3.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency4.style.backgroundColor = ""; fluency4.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency5.style.backgroundColor = ""; fluency5.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency6.style.backgroundColor = ""; fluency6.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        fluency7.style.backgroundColor = ""; fluency7.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+	}
+
+      if (fluency.value == 10) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#A7C7E7"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 9 && fluency.value < 10) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        fluency2.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        fluency3.style.backgroundColor = "#FFFFFF";
+        fluency4.style.backgroundColor = "#FFFFFF";
+        fluency5.style.backgroundColor = "#FFFFFF";
+        fluency6.style.backgroundColor = "#FFFFFF";
+        fluency7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (fluency.value == 9) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#A7C7E7"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 8 && fluency.value < 9) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF";
+        fluency2.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        fluency3.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        fluency4.style.backgroundColor = "#FFFFFF";
+        fluency5.style.backgroundColor = "#FFFFFF";
+        fluency6.style.backgroundColor = "#FFFFFF";
+        fluency7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (fluency.value == 8) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#A7C7E7"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 7 && fluency.value < 8) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF";
+        fluency2.style.backgroundColor = "#FFFFFF";
+        fluency3.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        fluency4.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        fluency5.style.backgroundColor = "#FFFFFF";
+        fluency6.style.backgroundColor = "#FFFFFF";
+        fluency7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (fluency.value == 7) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#A7C7E7"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 6 && fluency.value < 7) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF";
+        fluency2.style.backgroundColor = "#FFFFFF";
+        fluency3.style.backgroundColor = "#FFFFFF";
+        fluency4.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        fluency5.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        fluency6.style.backgroundColor = "#FFFFFF";
+        fluency7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (fluency.value >= 5 && fluency.value <= 6) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#F2A2E8"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 4 && fluency.value < 5) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF";
+        fluency2.style.backgroundColor = "#FFFFFF";
+        fluency3.style.backgroundColor = "#FFFFFF";
+        fluency4.style.backgroundColor = "#FFFFFF";
+        fluency5.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        fluency6.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        fluency7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (fluency.value >= 3 && fluency.value <= 4) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#F2A2E8"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value > 2 && fluency.value < 3) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF";
+        fluency2.style.backgroundColor = "#FFFFFF";
+        fluency3.style.backgroundColor = "#FFFFFF";
+        fluency4.style.backgroundColor = "#FFFFFF";
+        fluency5.style.backgroundColor = "#FFFFFF";
+        fluency6.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        fluency7.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+	}
+
+      if (fluency.value >= 1 && fluency.value <= 2) {
+        fluency.style.backgroundColor = "#FFFFFF";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#F2A2E8"; fluency7.style.backgroundImage = "";
+	}
+
+      if (fluency.value >= 0 && fluency.value < 1) {
+        fluency.style.backgroundColor = "#F2A2E8";
+        fluency1.style.backgroundColor = "#FFFFFF"; fluency1.style.backgroundImage = "";
+        fluency2.style.backgroundColor = "#FFFFFF"; fluency2.style.backgroundImage = "";
+        fluency3.style.backgroundColor = "#FFFFFF"; fluency3.style.backgroundImage = "";
+        fluency4.style.backgroundColor = "#FFFFFF"; fluency4.style.backgroundImage = "";
+        fluency5.style.backgroundColor = "#FFFFFF"; fluency5.style.backgroundImage = "";
+        fluency6.style.backgroundColor = "#FFFFFF"; fluency6.style.backgroundImage = "";
+        fluency7.style.backgroundColor = "#FFFFFF"; fluency7.style.backgroundImage = "";
+	}
+    }
+  </script>
+<!-- FLUENCY CHANGE SCRIPT -->
+
+
+
+<!-- GRAMMAR CHANGE SCRIPT -->
+  <script type="text/javascript">
+    function gramColorChange() {
+      var grammar = document.getElementById("Grammar");
+      var grammar1 = document.getElementById("gram1");
+      var grammar2 = document.getElementById("gram2");
+      var grammar3 = document.getElementById("gram3");
+      var grammar4 = document.getElementById("gram4");
+      var grammar5 = document.getElementById("gram5");
+      var grammar6 = document.getElementById("gram6");
+      var grammar7 = document.getElementById("gram7");
+
+      if (grammar.value >= 11) {
+	document.getElementById("Grammar").style.background = "red";
+        grammar1.style.backgroundColor = ""; grammar1.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar2.style.backgroundColor = ""; grammar2.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar3.style.backgroundColor = ""; grammar3.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar4.style.backgroundColor = ""; grammar4.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar5.style.backgroundColor = ""; grammar5.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar6.style.backgroundColor = ""; grammar6.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+        grammar7.style.backgroundColor = ""; grammar7.style.backgroundImage = ""; Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
+	}
+
+      if (grammar.value == 10) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#A7C7E7"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 9 && grammar.value < 10) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        grammar2.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        grammar3.style.backgroundColor = "#FFFFFF";
+        grammar4.style.backgroundColor = "#FFFFFF";
+        grammar5.style.backgroundColor = "#FFFFFF";
+        grammar6.style.backgroundColor = "#FFFFFF";
+        grammar7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (grammar.value == 9) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#A7C7E7"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 8 && grammar.value < 9) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF";
+        grammar2.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        grammar3.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        grammar4.style.backgroundColor = "#FFFFFF";
+        grammar5.style.backgroundColor = "#FFFFFF";
+        grammar6.style.backgroundColor = "#FFFFFF";
+        grammar7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (grammar.value == 8) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#A7C7E7"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 7 && grammar.value < 8) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF";
+        grammar2.style.backgroundColor = "#FFFFFF";
+        grammar3.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        grammar4.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(167,199,231) 25%)";
+        grammar5.style.backgroundColor = "#FFFFFF";
+        grammar6.style.backgroundColor = "#FFFFFF";
+        grammar7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (grammar.value == 7) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#A7C7E7"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 6 && grammar.value < 7) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF";
+        grammar2.style.backgroundColor = "#FFFFFF";
+        grammar3.style.backgroundColor = "#FFFFFF";
+        grammar4.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(167,199,231) 25%)";
+        grammar5.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        grammar6.style.backgroundColor = "#FFFFFF";
+        grammar7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (grammar.value >= 5 && grammar.value <= 6) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#F2A2E8"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 4 && grammar.value < 5) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF";
+        grammar2.style.backgroundColor = "#FFFFFF";
+        grammar3.style.backgroundColor = "#FFFFFF";
+        grammar4.style.backgroundColor = "#FFFFFF";
+        grammar5.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        grammar6.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+        grammar7.style.backgroundColor = "#FFFFFF";
+	}
+
+      if (grammar.value >= 3 && grammar.value <= 4) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#F2A2E8"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value > 2 && grammar.value < 3) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF";
+        grammar2.style.backgroundColor = "#FFFFFF";
+        grammar3.style.backgroundColor = "#FFFFFF";
+        grammar4.style.backgroundColor = "#FFFFFF";
+        grammar5.style.backgroundColor = "#FFFFFF";
+        grammar6.style.backgroundImage = "linear-gradient(to right, white 50%, rgba(242,162,232) 25%)";
+        grammar7.style.backgroundImage = "linear-gradient(to left, white 50%, rgba(242,162,232) 25%)";
+	}
+
+      if (grammar.value >= 1 && grammar.value <= 2) {
+        grammar.style.backgroundColor = "#FFFFFF";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#F2A2E8"; grammar7.style.backgroundImage = "";
+	}
+
+      if (grammar.value >= 0 && grammar.value < 1) {
+        grammar.style.backgroundColor = "#F2A2E8";
+        grammar1.style.backgroundColor = "#FFFFFF"; grammar1.style.backgroundImage = "";
+        grammar2.style.backgroundColor = "#FFFFFF"; grammar2.style.backgroundImage = "";
+        grammar3.style.backgroundColor = "#FFFFFF"; grammar3.style.backgroundImage = "";
+        grammar4.style.backgroundColor = "#FFFFFF"; grammar4.style.backgroundImage = "";
+        grammar5.style.backgroundColor = "#FFFFFF"; grammar5.style.backgroundImage = "";
+        grammar6.style.backgroundColor = "#FFFFFF"; grammar6.style.backgroundImage = "";
+        grammar7.style.backgroundColor = "#FFFFFF"; grammar7.style.backgroundImage = "";
+	}
+    }
+  </script>
+<!-- GRAMMAR CHANGE SCRIPT -->
+
+
+
+<!-- STUDENT'S NAME SCRIPT -->
+<script>
+function getStudentName() {
+  var person = prompt("Enter student's name:", "Enter student's name here!");
+  if (person != null) {
+    document.getElementById("students-name").innerHTML = person; } }
+</script>
+<!-- STUDENT'S NAME SCRIPT -->
+
+
+<div class="popup" id="popup">
+  <span class="closebtn" onclick="this.parentElement.style.display='none'; killPopUp();">&times;</span>
+  <font style="color: yellow; font-size: 20px;"><b>&#x2B07;</b></font> Click on the criteria boxes to assign the points! <font style="color: yellow; font-size: 22px;"><b>&#x27A1;</b> &nbsp;&nbsp;&nbsp;
+</div>
+
+
+<script>
+function killPopUp() {
+	if (typeof(Storage) !== "undefined") {
+	  localStorage.setItem("popup", "killed");
+	  document.getElementById("popup").style.display = "none"; } }
+
+ if (localStorage.getItem("popup") === "killed") {
+   document.getElementById("popup").style.display = "none"; }
+</script>
+
+
+</body>
+</html>
