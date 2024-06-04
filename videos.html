@@ -10,6 +10,8 @@
 
 <body>
 
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
 <div class="grid-container">
   <div class="title" style="border: 2px solid darkgray; padding: 0px; margin-top: 0px; cursor: auto;"><p><font size="3px"><b>Video Presentation Rubric (60 Points | 70% Scale)</b></font></p></div>
   <div class="points" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><font size="2px" color="#AA0000">Audio:<br><input type="checkbox" class="checkbox" unchecked id="audio-switch" /><label for="audio-switch" class="toggle"></font><br><br><b>Points:</b></div>
@@ -92,13 +94,13 @@
   <div class="xgram" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Grammar" min="0" max="10" step="0.5" oninput="getResult(); gramColorChange();"></div>
 
   <div class="perform" style="cursor: auto;">Presentation Performance:</div>
-  <div class="perf1" id="perf1" onclick="Video.value='10'; getResult(); perfColorChange();">Formal language, but with a very natural conversational character. There is no reading and it is not memorized.</div>
-  <div class="perf2" id="perf2" onclick="Video.value='9'; getResult(); perfColorChange();">Rather conversational language, but not completely natural. The presentation appears not to be memorized or read.</div>
-  <div class="perf3" id="perf3" onclick="Video.value='8'; getResult(); perfColorChange();">Interaction is mostly conversational, but shows some signs of memorization or reading. Maintains formal aspects of the language.</div>
-  <div class="perf4" id="perf4" onclick="Video.value='7'; getResult(); perfColorChange();">Discursive ability barely satisfactory & casual. Presents clear memorization cues, reads several paragraphs or directly from the screen.</div>
+  <div class="perf1" id="perf1" onclick="Video.value='10'; getResult(); perfColorChange();">Formal language with a very natural conversational character. There is no reading and it is not memorized.</div>
+  <div class="perf2" id="perf2" onclick="Video.value='9'; getResult(); perfColorChange();">Mostly conversational, but not completely natural or formal. Appears not memorized or read, with few exceptions.</div>
+  <div class="perf3" id="perf3" onclick="Video.value='8'; getResult(); perfColorChange();">Language is rather conversational, mostly informal. Shows some memorization or reading.</div>
+  <div class="perf4" id="perf4" onclick="Video.value='7'; getResult(); perfColorChange();">Discourse is barely satisfactory, mostly casual. Mostly memorized or read from the screen.</div>
   <div class="perf5" id="perf5" onclick="Video.value='6'; getResult(); perfColorChange();">Presentation memorized almost entirely, without a conversational character. Rather informal language.</div>
-  <div class="perf6" id="perf6" onclick="Video.value='4'; getResult(); perfColorChange();">Mainly read, completely casual, lacks formal aspects. Lacks care of formal aspects of the language.</div>
-  <div class="perf7" id="perf7" onclick="Video.value='2'; getResult(); perfColorChange();">Presentation memorized or read in its entirety. Completely colloquial, no care of formal aspect of the language.</div>
+  <div class="perf6" id="perf6" onclick="Video.value='4'; getResult(); perfColorChange();">Mainly read, completely casual, lacks formal aspects. Care is not places on formal aspects of the language.</div>
+  <div class="perf7" id="perf7" onclick="Video.value='2'; getResult(); perfColorChange();">Presentation was completely memorized or read. Colloquial language, lacks care of formal aspects.</div>
   <div class="xperf" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Video" min="0" max="10" step="0.5" oninput="getResult(); perfColorChange();"></div>
 
   <div class="foot" style="border: 0px dashed darkgray; cursor: auto;"><p class="footnotes">This scoring rubric identifies 10 points in its scale. The passing grade corresponds to 7 points in each criteria, which represents 70% achievement. Click on the different descritors to assign the points or, do it manually to assign half points. More tools available on the <a href="https://play.google.com/store/apps/details?id=speaking.assessment.rubric" target="_blank">Speaking Assessment App</a> (Android phones).</p></div>
@@ -1247,7 +1249,7 @@ function getStudentName() {
 
 <div class="popup" id="popup">
   <span class="closebtn" onclick="this.parentElement.style.display='none'; killPopUp();">&times;</span>
-  <font style="color: yellow; font-size: 20px;"><b>&#x2B07;</b></font> Click on the criteria boxes to assign the points! <font style="color: yellow; font-size: 22px;"><b>&#x27A1;</b> &nbsp;&nbsp;&nbsp;
+  <font style="color: yellow; font-size: 20px;"><b>&#x2B07;</b></font> Click on the descriptors to assign the points!<font style="color: yellow; font-size: 22px;"><b>&#x27A1;</b> &nbsp;&nbsp;&nbsp;
 </div>
 
 
@@ -1259,6 +1261,20 @@ function killPopUp() {
 
  if (localStorage.getItem("popup") === "killed") {
    document.getElementById("popup").style.display = "none"; }
+</script>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "40px"; 
+  } else {
+    document.getElementById("return").style.top = "-120px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
 </script>
 
 

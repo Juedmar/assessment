@@ -10,6 +10,8 @@
 
 <body>
 
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
 <div class="grid-container">
   <div class="title" style="border: 2px solid darkgray; padding: 0px; margin-top: 0px; cursor: auto;"><p><font size="3px"><b>Speaking Assessment Rubric (50 Points | 70% Scale)</b></font></p></div>
   <div class="points" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><font size="2px" color="#AA0000">Audio:<br><input type="checkbox" class="checkbox" unchecked id="audio-switch" /><label for="audio-switch" class="toggle"></font><br><br><b>Points:</b></div>
@@ -1067,6 +1069,20 @@ function killPopUp() {
 
  if (localStorage.getItem("popup") === "killed") {
    document.getElementById("popup").style.display = "none"; }
+</script>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "40px"; 
+  } else {
+    document.getElementById("return").style.top = "-120px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
 </script>
 
 
