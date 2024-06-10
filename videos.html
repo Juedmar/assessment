@@ -10,6 +10,7 @@
 
 <body>
 
+<a href="#" onclick="window.location.reload(true);"><div id="refresh" class="refresh">&#10227;</div></a>
 <a href="index.html"><div id="return" class="return">&larrhk;</div></a>
 
 <div class="grid-container">
@@ -1269,8 +1270,10 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
+    document.getElementById("refresh").style.top = "40px"; 
     document.getElementById("return").style.top = "40px"; 
   } else {
+    document.getElementById("refresh").style.top = "-120px"; 
     document.getElementById("return").style.top = "-120px"; 
   }
   prevScrollpos = currentScrollPos;
