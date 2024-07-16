@@ -6,13 +6,7 @@ function getResult() {
     var Fluency = parseFloat(document.getElementById("Fluency").value);
     var Grammar = parseFloat(document.getElementById("Grammar").value);
 
-	// OLD CODE WITH INTEGERS
-	//    var Content = parseInt(document.getElementById("Content").value);
-	//    var Vocabulary = parseInt(document.getElementById("Vocabulary").value);
-	//    var Pronunciation = parseInt(document.getElementById("Pronunciation").value);
-	//    var Fluency = parseInt(document.getElementById("Fluency").value);
-	//    var Grammar = parseInt(document.getElementById("Grammar").value);
-
+if (Content > 0 && Vocabulary > 0 && Pronunciation > 0 && Fluency > 0 && Grammar > 0 ) { 
     var getPoints = document.getElementById("Points");
     Points.value  = Content + Vocabulary + Pronunciation + Fluency + Grammar;
         Points.value = parseFloat(Points.value);
@@ -107,5 +101,10 @@ function getResult() {
 		setErrorAudio = document.getElementById('ErrorAudio'),
 		document.getElementById("ErrorAudio").play();
 		alert("ERROR:\n⚠ One of the criteria is below the lowest point!! 📉"); }
+	}
+if (Content == 0 || Vocabulary == 0 || Pronunciation == 0 || Fluency == 0 || Grammar == 0 ) {
+	Points.value = ""
+	Percent.value = ""
+	FinalGrade.value = ""
+	}
 }
-
