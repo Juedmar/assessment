@@ -7,10 +7,13 @@ function getResult() {
     var Grammar = parseFloat(document.getElementById("Grammar").value);
     var Video = parseFloat(document.getElementById("Video").value);
 
+    var Link = document.getElementById("shareLink");
+
 if (Content > 0 && Vocabulary > 0 && Pronunciation > 0 && Fluency > 0 && Grammar > 0 && Video > 0 ) {
     var getPoints = document.getElementById("Points");
     Points.value  = Content + Vocabulary + Pronunciation + Fluency + Grammar + Video;
         Points.value = parseFloat(Points.value);
+	Link.style.display = "inline";
 
     if (Points.value > 60 ) {
             Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
@@ -107,5 +110,7 @@ if (Content == 0 || Vocabulary == 0 || Pronunciation == 0 || Fluency == 0 || Gra
 	Points.value = ""
 	Percent.value = ""
 	FinalGrade.value = ""
+	Link.style.display = "none"
 	}
+
 }
