@@ -8,7 +8,7 @@
 	<title>Video Presentation Rubric (60 Points | 70%)</title>
 </head>
 
-<body>
+<body onload="remoteAssessment()">
 
 <a href="videos.html"><div id="refresh" class="refresh">&#10227;</div></a>
 <a href="index.html"><div id="return" class="return">&larrhk;</div></a>
@@ -1279,6 +1279,44 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 </script>
+
+
+
+
+<script type="text/javascript">
+function remoteAssessment() {
+// Assessment Elements
+ var Content = document.getElementById('Content')
+ var Vocabulary = document.getElementById('Vocabulary')
+ var Pronunciation = document.getElementById('Pronunciation')
+ var Fluency = document.getElementById('Fluency')
+ var Grammar = document.getElementById('Grammar')
+ var Performance = document.getElementById('Video')
+// Remote Values
+ var newCon = (new URLSearchParams(window.location.search)).get("con")
+ var newVoc = (new URLSearchParams(window.location.search)).get("voc")
+ var newPro = (new URLSearchParams(window.location.search)).get("pro")
+ var newFlu = (new URLSearchParams(window.location.search)).get("flu")
+ var newGra = (new URLSearchParams(window.location.search)).get("gra")
+ var newPer = (new URLSearchParams(window.location.search)).get("per")
+// Check Variables
+ if (newCon >= 1 && newCon <= 10) {Content.value = newCon; contColorChange()}
+ if (newVoc >= 1 && newVoc <= 10) {Vocabulary.value = newVoc; vocaColorChange()}
+ if (newPro >= 1 && newPro <= 10) {Pronunciation.value = newPro; pronColorChange()}
+ if (newFlu >= 1 && newFlu <= 10) {Fluency.value = newFlu; flueColorChange()}
+ if (newGra >= 1 && newGra <= 10) {Grammar.value = newGra; gramColorChange()}
+ if (newPer >= 1 && newPer <= 10) {Performance.value = newPer; perfColorChange()}
+// Get result if all values exist!
+ if (newCon !== isNaN && newVoc !== isNaN && newPro !== isNaN && newFlu !== isNaN && newGra !== isNaN && newPer !== isNaN) {getResult()}
+}
+
+// /===========================================================\
+// | Format: /videos.html?con=10&voc=9&pro=8&flu=7&gra=6&per=4 |
+// \===========================================================/
+
+</script>
+
+
 
 
 </body>
