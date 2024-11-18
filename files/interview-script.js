@@ -12,7 +12,7 @@ if (Content > 0 && Vocabulary > 0 && Pronunciation > 0 && Fluency > 0 && Grammar
     var getPoints = document.getElementById("Points");
     Points.value  = Content + Vocabulary + Pronunciation + Fluency + Grammar;
         Points.value = parseFloat(Points.value);
-	Link.style.display = "inline";
+	Link.style.visibility = "visible";
 
     if (Points.value > 50 ) {
             Points.value = 0; Percent.value = 0; FinalGrade.value = 0;
@@ -109,6 +109,6 @@ if (Content == 0 || Vocabulary == 0 || Pronunciation == 0 || Fluency == 0 || Gra
 	Points.value = ""
 	Percent.value = ""
 	FinalGrade.value = ""
-	Link.style.display = "none"
+	Link.style.visibility = "hidden"
 	}
 }
