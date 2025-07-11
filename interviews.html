@@ -95,12 +95,12 @@
   <div class="gram7" id="gram7" onclick="Grammar.value='2'; getResult(); gramColorChange();">Grammatical errors make it impossible to communicate. No basic grammar structures.</div>
   <div class="xgram" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: auto;"><input type="number" id="Grammar" min="0" max="10" step="0.5" oninput="getResult(); gramColorChange();"></div>
 
-  <div class="foot" style="border: 0px dashed darkgray; cursor: auto;"><p class="footnotes">This scoring rubric identifies 10 points in its scale. The passing grade corresponds to 7 points in each criteria, which represents 70% achievement. Click on the different descritors to assign the points or, do it manually to assign half points. More tools available on the <a href="https://play.google.com/store/apps/details?id=speaking.assessment.rubric" target="_blank">Speaking Assessment App</a> (Android phones).</p></div>
+  <div class="foot" style="border: 0px dashed darkgray; cursor: auto;"><p class="footnotes">This scoring rubric identifies 10 points in its scale. The passing grade corresponds to 7 points in each criteria, which represents 70% achievement. You can click on the different descritors to assign points, or assign half points manually. More tools available on the <a href="https://play.google.com/store/apps/details?id=speaking.assessment.rubric" target="_blank">Speaking Assessment App</a> (Android phones).</p></div>
   <div class="label1" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Points:</b></font></div>
   <div class="sum" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: not-allowed;"><input type="number" class="TheResults" title="Points" id="Points" READONLY disabled="disabled" min="5" max="50" step="0.5"></div>
 
   <div class="design" style="border: 0px dashed darkgray; cursor: grab;"><font size="1px" color="gray"><br>Developed by Juan Edo. Méndez (juan.mendez@upla.cl)</font></div>
-  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a class="students-name" id="students-name" onclick="getStudentName()" style="cursor: pointer;">Click to change!</a></font></div>
+  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a id="students-name" class="students-name" onclick="getStudentName()" style="cursor: pointer;">Student's Name</a></font></div>
   <div class="printout" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="6px" color="gray"><a onclick="window.print()" style="cursor: pointer;"><small>🖨️</small></a></font></div>
   <div class="final" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><b>Grade: <input type="number" title="FinalGrade" id="FinalGrade" class="FinalGrade" READONLY disabled="disabled" min="1.0" max="7.0" step="0.1" placeholder="0.0"></b></font> <span id="shareLink" style="color: blue; font-size: 3em; vertical-align: bottom; visibility: hidden; cursor: pointer;" onclick="getLink()">&#10149;</span> </div>
   <div class="label2" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Percent:</b></font></div>
@@ -1050,7 +1050,7 @@
 <!-- STUDENT'S NAME SCRIPT -->
 <script>
 function getStudentName() {
-  var person = prompt("Enter student's name:", "Enter student's name here!");
+  var person = prompt("Enter student's name:", "Student's Name");
   if (person != null) {
     document.getElementById("students-name").innerHTML = person; } }
 </script>
@@ -1099,12 +1099,14 @@ function remoteAssessment() {
  var Pronunciation = document.getElementById('Pronunciation')
  var Fluency = document.getElementById('Fluency')
  var Grammar = document.getElementById('Grammar')
+ var newName = document.getElementById('students-name')
 // Remote Values
  var newCon = (new URLSearchParams(window.location.search)).get("con")
  var newVoc = (new URLSearchParams(window.location.search)).get("voc")
  var newPro = (new URLSearchParams(window.location.search)).get("pro")
  var newFlu = (new URLSearchParams(window.location.search)).get("flu")
  var newGra = (new URLSearchParams(window.location.search)).get("gra")
+ var aPupil = (new URLSearchParams(window.location.search)).get("who")
 // Check Variables
  if (newCon >= 1 && newCon <= 10) {Content.value = newCon; contColorChange()}
  if (newVoc >= 1 && newVoc <= 10) {Vocabulary.value = newVoc; vocaColorChange()}
@@ -1113,28 +1115,44 @@ function remoteAssessment() {
  if (newGra >= 1 && newGra <= 10) {Grammar.value = newGra; gramColorChange()}
 // Get result if all values exist!
  if (newCon !== isNaN && newVoc !== isNaN && newPro !== isNaN && newFlu !== isNaN && newGra !== isNaN) {getResult()}
+// Student's Name!
+ if (aPupil == "" || aPupil == undefined) { newName.innerHTML = "Student's Name"}
+ else { newName.innerHTML = aPupil }
 }
 
-// /=====================================================\
-// | Format: /videos.html?con=10&voc=9&pro=8&flu=7&gra=6 |
-// \=====================================================/
+// /=================================================================\
+// | Format: /videos.html?con=10&voc=9&pro=8&flu=7&gra=6&who=thisGuy |
+// \=================================================================/
 
 </script>
 
 
 <script type="text/javascript">
 function getLink() {
-  var thisURL = "https://juedmar.github.io/assessment/interviews.html?++++++"
-  var trunURL = thisURL.substr(0, 52);
-  var thePoints =
-	"?con=" + Content.value +
-	"&voc=" + Vocabulary.value +
-	"&pro=" + Pronunciation.value +
-	"&flu=" + Fluency.value +
-	"&gra=" + Grammar.value;
-  navigator.clipboard.writeText(trunURL+thePoints);
-  alert("Link copied!");
-  window.location.href = trunURL+thePoints;
+ var thisURL = "https://juedmar.github.io/assessment/interviews.html?++++++"
+ var trunURL = thisURL.substr(0, 52);
+ var thePoints =
+  "?con=" + Content.value +
+  "&voc=" + Vocabulary.value +
+  "&pro=" + Pronunciation.value +
+  "&flu=" + Fluency.value +
+  "&gra=" + Grammar.value;
+
+// NAME VARIABLES
+var theName = document.getElementById('students-name')
+var customName = theName.innerHTML.replaceAll(' ', '%20')
+
+// CHECKING CUSTOM NAME!
+ if (theName.innerHTML !== "Student's Name") {
+  navigator.clipboard.writeText(trunURL+thePoints+'&who='+customName);
+  alert("Link copied!")
+  window.location.href = trunURL+thePoints+'&who='+customName;
+ }
+ else {
+  navigator.clipboard.writeText(trunURL+thePoints)
+  alert("Link copied!")
+  window.location.href = trunURL+thePoints
+ }
 }
 </script>
 
