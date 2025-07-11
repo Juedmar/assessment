@@ -1308,8 +1308,10 @@ function remoteAssessment() {
 // Get result if all values exist!
  if (newCon >= 1 && newVoc >= 1 && newPro >= 1 && newFlu >= 1 && newGra >= 1 && newPer >= 1) { getResult(); }
 // Student's Name!
- if (aPupil == "" || aPupil == undefined) { newName.innerHTML = "Student's Name"}
- else { newName.innerHTML = aPupil }
+ var theName = document.getElementById('students-name')
+ var aPupil = (new URLSearchParams(window.location.search)).get("who")
+ if (aPupil == "" || aPupil == null || aPupil == undefined) { theName.innerHTML = "Student's Name" }
+ else { theName.innerHTML = aPupil }
 }
 
 // /=================================================================\
@@ -1321,15 +1323,15 @@ function remoteAssessment() {
 
 <script type="text/javascript">
 function getLink() {
-  var thisURL = "https://juedmar.github.io/assessment/videos.html?++++++"
-  var trunURL = thisURL.substr(0, 48);
-  var thePoints =
-	"?con=" + Content.value +
-	"&voc=" + Vocabulary.value +
-	"&pro=" + Pronunciation.value +
-	"&flu=" + Fluency.value +
-	"&gra=" + Grammar.value +
-	"&per=" + Video.value;
+ var thisURL = "https://juedmar.github.io/assessment/videos.html?++++++"
+ var trunURL = thisURL.substr(0, 48);
+ var thePoints =
+  "?con=" + Content.value +
+  "&voc=" + Vocabulary.value +
+  "&pro=" + Pronunciation.value +
+  "&flu=" + Fluency.value +
+  "&gra=" + Grammar.value +
+  "&per=" + Video.value;
 
 // NAME VARIABLES
 var theName = document.getElementById('students-name')

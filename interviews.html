@@ -1116,8 +1116,10 @@ function remoteAssessment() {
 // Get result if all values exist!
  if (newCon !== isNaN && newVoc !== isNaN && newPro !== isNaN && newFlu !== isNaN && newGra !== isNaN) {getResult()}
 // Student's Name!
- if (aPupil == "" || aPupil == undefined) { newName.innerHTML = "Student's Name"}
- else { newName.innerHTML = aPupil }
+ var theName = document.getElementById('students-name')
+ var aPupil = (new URLSearchParams(window.location.search)).get("who")
+ if (aPupil == "" || aPupil == null || aPupil == undefined) { theName.innerHTML = "Student's Name" }
+ else { theName.innerHTML = aPupil }
 }
 
 // /=================================================================\
@@ -1153,6 +1155,7 @@ var customName = theName.innerHTML.replaceAll(' ', '%20')
   alert("Link copied!")
   window.location.href = trunURL+thePoints
  }
+
 }
 </script>
 
