@@ -109,7 +109,7 @@
   <div class="sum" style="text-align: center; border: 1px dashed darkgray; border-style: hidden dashed dashed dashed; cursor: not-allowed;"><input type="number" class="TheResults" title="Points" id="Points" READONLY disabled="disabled" min="5" max="50" step="0.5"></div>
 
   <div class="design" style="border: 0px dashed darkgray; cursor: grab;"><font size="1px" color="gray"><br>Developed by Juan Edo. Méndez (juan.mendez@upla.cl)</font></div>
-  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a class="students-name" id="students-name" onclick="getStudentName()" style="cursor: pointer;">Click to change!</a></font></div>
+  <div class="name" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><br><b>Name: </b><a class="students-name" id="students-name" onclick="getStudentName()" style="cursor: pointer;">Student's Name</a></font></div>
   <div class="printout" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="6px" color="gray"><a onclick="window.print()" style="cursor: pointer;"><small>🖨️</small></a></font></div>
   <div class="final" style="border: 0px dashed darkgray; cursor: auto; text-align: center;"><font size="3px" color="gray"><b>Grade: <input type="number" title="FinalGrade" id="FinalGrade" class="FinalGrade" READONLY disabled="disabled" min="1.0" max="7.0" step="0.1" placeholder="0.0"></b></font> <span id="shareLink" style="color: blue; font-size: 3em; vertical-align: bottom; visibility: hidden; cursor: pointer;" onclick="getLink()">&#10149;</span> </div>
   <div class="label2" style="border: 0px dashed darkgray; cursor: auto; text-align: right;"><font size="3px" color="gray"><b>Percent:</b></font></div>
@@ -1241,7 +1241,7 @@
 <!-- STUDENT'S NAME SCRIPT -->
 <script>
 function getStudentName() {
-  var person = prompt("Enter student's name:", "Enter student's name here!");
+  var person = prompt("Enter student's name:", "Student's Name");
   if (person != null) {
     document.getElementById("students-name").innerHTML = person; } }
 </script>
@@ -1307,11 +1307,14 @@ function remoteAssessment() {
  if (newPer >= 1 && newPer <= 10) {Performance.value = newPer; perfColorChange()}
 // Get result if all values exist!
  if (newCon >= 1 && newVoc >= 1 && newPro >= 1 && newFlu >= 1 && newGra >= 1 && newPer >= 1) { getResult(); }
+// Student's Name!
+ if (aPupil == "" || aPupil == undefined) { newName.innerHTML = "Student's Name"}
+ else { newName.innerHTML = aPupil }
 }
 
-// /===========================================================\
-// | Format: /videos.html?con=10&voc=9&pro=8&flu=7&gra=6&per=4 |
-// \===========================================================/
+// /=================================================================\
+// | Format: /videos.html?con=10&voc=9&pro=8&flu=7&gra=6&who=thisGuy |
+// \=================================================================/
 
 </script>
 
@@ -1327,9 +1330,23 @@ function getLink() {
 	"&flu=" + Fluency.value +
 	"&gra=" + Grammar.value +
 	"&per=" + Video.value;
-  navigator.clipboard.writeText(trunURL+thePoints);
-  alert("Link copied!");
-  window.location.href = trunURL+thePoints;
+
+// NAME VARIABLES
+var theName = document.getElementById('students-name')
+var customName = theName.innerHTML.replaceAll(' ', '%20')
+
+// CHECKING CUSTOM NAME!
+ if (theName.innerHTML !== "Student's Name") {
+  navigator.clipboard.writeText(trunURL+thePoints+'&who='+customName);
+  alert("Link copied!")
+  window.location.href = trunURL+thePoints+'&who='+customName;
+ }
+ else {
+  navigator.clipboard.writeText(trunURL+thePoints)
+  alert("Link copied!")
+  window.location.href = trunURL+thePoints
+ }
+
 }
 </script>
 
